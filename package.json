@@ -1,0 +1,23 @@
+{
+  "name": "start-template-gulp",
+  "version": "1.0.0",
+  "description": "Стартовий шаблон для проекту",
+  "main": "gulpfile.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanStashuk/start-template-gulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RomanStashuk/start-template-gulp/issues"
+  },
+  "homepage": "https://github.com/RomanStashuk/start-template-gulp#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
