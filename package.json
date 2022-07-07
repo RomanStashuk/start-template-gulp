@@ -1,8 +1,8 @@
 {
   "name": "start-template-gulp",
   "version": "1.0.0",
-  "description": "Стартовий шаблон для проекту",
-  "main": "gulpfile.js",
+  "description": "Стартовий шаблон для проекту на основі Gulp",
+  "main": "gulpfile.babel.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,9 +15,25 @@
   },
   "homepage": "https://github.com/RomanStashuk/start-template-gulp#readme",
   "scripts": {
+    "start": "gulp",
+    "build": "gulp --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/register": "^7.18.6",
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-html-bem-validator": "^1.0.5",
+    "gulp-load-plugins": "^2.0.7",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-webp-html": "^1.0.2"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
