@@ -10,26 +10,19 @@ import app from './config/app.js';
 import html from './tasks/html.js';
 import pug from './tasks/pug.js';
 import clear from './tasks/clear.js';
+import server from './tasks/server.js';
 
 // Наблюдение
-const server = () => {
-  browserSync.init({
-    server: {
-      baseDir: path.root
-    }
-  });
-}
-
 const watcher = () => {
   gulp.watch(path.html.watch, html).on('all', browserSync.reload);
   gulp.watch(path.pug.watch, pug).on('all', browserSync.reload);
 }
 
 
-// Сборка
+// Збирання проекту
 const build = gulp.series(
   clear,
-  gulp.parallel(pug, )
+  gulp.parallel(html, )
 );
 
 const dev = gulp.series(
