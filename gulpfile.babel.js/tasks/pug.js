@@ -10,7 +10,7 @@ import loadPlugins from 'gulp-load-plugins';
 const gp = loadPlugins();
 
 
-// Обработка PUG
+// Обробка PUG
 export default () => {
   return gulp.src(path.pug.src)
     .pipe(gp.plumber({

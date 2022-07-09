@@ -5,7 +5,7 @@ import path from '../config/paths.js';
 // Plugins
 import del from 'del';
 
-// Удаленик директории
+// Видалення каталогу
 export default () => {
   return del(path.root);
 }
