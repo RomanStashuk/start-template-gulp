@@ -6,7 +6,8 @@ import browserSync from 'browser-sync';
 import path from './config/paths.js';
 import app from './config/app.js';
 
-// Задачи
+// Задачі
+import html from './tasks/html.js';
 import pug from './tasks/pug.js';
 import clear from './tasks/clear.js';
 
@@ -20,6 +21,7 @@ const server = () => {
 }
 
 const watcher = () => {
+  gulp.watch(path.html.watch, html).on('all', browserSync.reload);
   gulp.watch(path.pug.watch, pug).on('all', browserSync.reload);
 }
 
@@ -27,7 +29,7 @@ const watcher = () => {
 // Сборка
 const build = gulp.series(
   clear,
-  gulp.parallel(pug)
+  gulp.parallel(pug, )
 );
 
 const dev = gulp.series(
@@ -35,7 +37,11 @@ const dev = gulp.series(
   gulp.parallel(watcher, server)
 );
 
-export { pug };
+export {
+  html,
+  pug
+};
+
 
 export default app.isProd
   ? build
