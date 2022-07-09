@@ -26,11 +26,14 @@
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-html-bem-validator": "^1.0.5",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-load-plugins": "^2.0.7",
     "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^5.0.0",
+    "gulp-size": "^4.0.1",
     "gulp-webp-html": "^1.0.2"
   },
   "browserslist": [
