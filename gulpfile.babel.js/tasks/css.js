@@ -31,4 +31,5 @@ export default () => {
     .pipe(gp.csso())
     .pipe(gp.size({ title: 'CSS after' }))
     .pipe(gulp.dest(path.css.dest, { sourcemaps: app.isDev }))
+    .pipe(browserSync.stream());
 }
