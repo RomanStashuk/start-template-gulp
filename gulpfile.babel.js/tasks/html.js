@@ -1,6 +1,6 @@
 'use strict';
 
-import gulp from 'gulp'
+import gulp from 'gulp';
 
 import path from '../config/paths.js';
 import app from '../config/app.js';
@@ -9,6 +9,7 @@ import app from '../config/app.js';
 import loadPlugins from 'gulp-load-plugins';
 const gp = loadPlugins();
 
+import browserSync from 'browser-sync';
 
 // Обробка HTML
 export default () => {
@@ -26,4 +27,5 @@ export default () => {
     .pipe(gp.size({ title: 'HTML after' }))
     .pipe(gp.htmlBemValidator())
     .pipe(gulp.dest(path.html.dest))
+    .pipe(browserSync.stream());
 }
