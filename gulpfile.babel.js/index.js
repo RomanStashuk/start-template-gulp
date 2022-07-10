@@ -14,6 +14,7 @@ import server from './tasks/server.js';
 import watcher from './tasks/watch.js';
 import images from './tasks/images.js';
 import scripts from './tasks/scripts.js';
+import zip from './tasks/zip.js';
 
 // Збирання проекту
 const build = gulp.series(
@@ -37,5 +38,6 @@ export {
   sass,
   fonts,
   images,
-  scripts
+  scripts,
+  zip
 };
