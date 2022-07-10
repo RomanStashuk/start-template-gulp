@@ -20,7 +20,16 @@ export default {
   },
 
   imagemin: {
-    verbose: true
+    verbose: true,
+    interlaced: true,
+    progressive: true,
+    svgoPlugins: [
+      { removeViewBox: false },
+      { cleanupIDs: false },
+      { removeTitle: true },
+      { removeHiddenElems: false },
+      { cleanupNumericValues: { floatPrecision: 1 }}
+    ]
   },
 
   fonter: {
