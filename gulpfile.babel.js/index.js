@@ -9,6 +9,7 @@ import app from './config/app.js';
 import html from './tasks/html.js';
 import pug from './tasks/pug.js';
 import css from './tasks/css.js';
+import sass from './tasks/sass.js';
 import clear from './tasks/clear.js';
 import server from './tasks/server.js';
 import watcher from './tasks/watch.js';
@@ -16,7 +17,7 @@ import watcher from './tasks/watch.js';
 // Збирання проекту
 const build = gulp.series(
   clear,
-  gulp.parallel(html, css)
+  gulp.parallel(html, sass)
 );
 
 const dev = gulp.series(
@@ -31,5 +32,6 @@ export default app.isProd
 export {
   html,
   pug,
-  css
+  css,
+  sass
 };
