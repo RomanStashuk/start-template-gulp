@@ -7,9 +7,9 @@ import app from '../config/app.js';
 
 // Plugins
 import loadPlugins from 'gulp-load-plugins';
-const gp = loadPlugins();
-
 import browserSync from 'browser-sync';
+
+const gp = loadPlugins();
 
 // Обрoбка зображень
 export default () => {
@@ -28,4 +28,4 @@ export default () => {
     .pipe(gp.if(app.isProd, gp.imagemin(app.imagemin)))
     .pipe(gulp.dest(path.img.dest))
     .pipe(browserSync.stream());
-}
+};

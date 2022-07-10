@@ -1,6 +1,6 @@
 'use strict';
 
-import gulp from 'gulp'
+import gulp from 'gulp';
 
 import path from '../config/paths.js';
 
@@ -22,4 +22,4 @@ export default () => {
   gulp.watch(path.js.watch, scripts);
   gulp.watch(path.img.watch, images);
   gulp.watch(path.fonts.watch, fonts);
-}
+};

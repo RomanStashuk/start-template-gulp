@@ -7,9 +7,9 @@ import app from '../config/app.js';
 
 // Plugins
 import loadPlugins from 'gulp-load-plugins';
-const gp = loadPlugins();
-
 import browserSync from 'browser-sync';
+
+const gp = loadPlugins();
 
 // Обробка шрифтів
 export default () => {
@@ -26,4 +26,4 @@ export default () => {
     .pipe(gp.ttf2woff2())
     .pipe(gulp.dest(path.fonts.dest))
     .pipe(browserSync.stream());
-}
+};

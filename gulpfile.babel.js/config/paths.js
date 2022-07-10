@@ -47,4 +47,4 @@ export default {
     dest: pathDest + '/fonts',
     watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}'
   }
-}
+};

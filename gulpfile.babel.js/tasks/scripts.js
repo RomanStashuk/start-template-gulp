@@ -7,10 +7,10 @@ import app from '../config/app.js';
 
 // Plugins
 import loadPlugins from 'gulp-load-plugins';
-const gp = loadPlugins();
-
 import browserSync from 'browser-sync';
 import webpack from 'webpack-stream';
+
+const gp = loadPlugins();
 
 // Обрoбка JS
 export default () => {
@@ -25,4 +25,4 @@ export default () => {
     .pipe(webpack(app.webpack))
     .pipe(gulp.dest(path.js.dest, { sourcemaps: app.isDev }))
     .pipe(browserSync.stream());
-}
+};

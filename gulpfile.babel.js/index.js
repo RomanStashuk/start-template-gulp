@@ -1,8 +1,6 @@
 'use strict';
 
 import gulp from 'gulp';
-
-import path from './config/paths.js';
 import app from './config/app.js';
 
 // Задачі
@@ -10,14 +8,17 @@ import html from './tasks/html.js';
 import pug from './tasks/pug.js';
 import css from './tasks/css.js';
 import sass from './tasks/sass.js';
+import fonts from './tasks/fonts.js';
 import clear from './tasks/clear.js';
 import server from './tasks/server.js';
 import watcher from './tasks/watch.js';
+import images from './tasks/images.js';
+import scripts from './tasks/scripts.js';
 
 // Збирання проекту
 const build = gulp.series(
   clear,
-  gulp.parallel(html, sass)
+  gulp.parallel(html, pug, css, sass, fonts, images, scripts)
 );
 
 const dev = gulp.series(
@@ -33,5 +34,8 @@ export {
   html,
   pug,
   css,
-  sass
+  sass,
+  fonts,
+  images,
+  scripts
 };

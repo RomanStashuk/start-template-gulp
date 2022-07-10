@@ -7,9 +7,9 @@ import app from '../config/app.js';
 
 // Plugins
 import loadPlugins from 'gulp-load-plugins';
-const gp = loadPlugins();
-
 import browserSync from 'browser-sync';
+
+const gp = loadPlugins();
 
 // Обробка CSS
 export default () => {
@@ -32,4 +32,4 @@ export default () => {
     .pipe(gp.size({ title: 'CSS after' }))
     .pipe(gulp.dest(path.css.dest, { sourcemaps: app.isDev }))
     .pipe(browserSync.stream());
-}
+};

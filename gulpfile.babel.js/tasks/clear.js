@@ -8,4 +8,4 @@ import del from 'del';
 // Видалення каталогу
 export default () => {
   return del(path.root);
-}
+};

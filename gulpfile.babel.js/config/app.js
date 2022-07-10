@@ -28,11 +28,11 @@ export default {
       { cleanupIDs: false },
       { removeTitle: true },
       { removeHiddenElems: false },
-      { cleanupNumericValues: { floatPrecision: 1 }}
+      { cleanupNumericValues: { floatPrecision: 1 } }
     ]
   },
 
   fonter: {
     formats: ['ttf', 'woff', 'eot', 'svg']
   }
-}
+};

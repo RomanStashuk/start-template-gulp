@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import path from '../config/paths.js';
 
@@ -11,4 +11,4 @@ export default () => {
       baseDir: path.root
     }
   });
-}
+};

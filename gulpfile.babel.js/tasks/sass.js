@@ -7,11 +7,10 @@ import app from '../config/app.js';
 
 // Plugins
 import loadPlugins from 'gulp-load-plugins';
-const gp = loadPlugins();
-
 import browserSync from 'browser-sync';
-
 import dartSass from 'sass';
+
+const gp = loadPlugins();
 const sassPlugin = gp.sass(dartSass);
 
 // Обрdбка SASS/SCSS
@@ -35,4 +34,4 @@ export default () => {
     .pipe(gp.size({ title: 'CSS after' }))
     .pipe(gulp.dest(path.sass.dest, { sourcemaps: app.isDev }))
     .pipe(browserSync.stream());
-}
+};
