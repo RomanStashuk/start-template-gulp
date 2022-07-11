@@ -15,6 +15,7 @@ import watcher from './tasks/watch.js';
 import images from './tasks/images.js';
 import scripts from './tasks/scripts.js';
 import zip from './tasks/zip.js';
+import lintspaces from './tasks/lintspaces.js';
 
 // Збирання проекту
 const build = gulp.series(
@@ -39,5 +40,6 @@ export {
   fonts,
   images,
   scripts,
-  zip
+  zip,
+  lintspaces
 };
