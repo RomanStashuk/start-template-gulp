@@ -46,5 +46,21 @@ export default {
     src: pathSrc + '/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
     dest: pathDest + '/fonts',
     watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}'
+  },
+
+  lintspaces: {
+    src: [
+      '*.json',
+      '*.md',
+      './gulpfile.babel.js/**/*.js',
+      './src/html/**/*.html',
+      './src/pug/**/*.pug',
+      './src/js/**/*.js',
+      './src/img/**/*.svg',
+      './src/css/**/*.css',
+      '!./src/css/base/normalize.css',
+      './src/sass/**/*.scss',
+      '!./src/sass/base/normalize.scss'
+    ]
   }
 };
