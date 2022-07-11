@@ -14,13 +14,14 @@ import server from './tasks/server.js';
 import watcher from './tasks/watch.js';
 import images from './tasks/images.js';
 import scripts from './tasks/scripts.js';
+import copy from './tasks/copy.js';
 import zip from './tasks/zip.js';
 import lintspaces from './tasks/lintspaces.js';
 
 // Збирання проекту
 const build = gulp.series(
   clear,
-  gulp.parallel(html, pug, css, sass, fonts, images, scripts)
+  gulp.parallel(html, pug, css, sass, copy, fonts, images, scripts)
 );
 
 const dev = gulp.series(
@@ -37,6 +38,7 @@ export {
   pug,
   css,
   sass,
+  copy,
   fonts,
   images,
   scripts,

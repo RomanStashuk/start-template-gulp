@@ -9,6 +9,7 @@ import html from './html.js';
 import pug from './pug.js';
 import css from './css.js';
 import sass from './sass.js';
+import copy from './copy.js';
 import fonts from './fonts.js';
 import images from './images.js';
 import scripts from './scripts.js';
@@ -19,6 +20,7 @@ export default () => {
   gulp.watch(path.pug.watch, pug);
   gulp.watch(path.css.watch, css);
   gulp.watch(path.sass.watch, sass);
+  gulp.watch(path.copy.watch, copy);
   gulp.watch(path.js.watch, scripts);
   gulp.watch(path.img.watch, images);
   gulp.watch(path.fonts.watch, fonts);
