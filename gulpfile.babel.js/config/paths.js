@@ -53,14 +53,20 @@ export default {
       '*.json',
       '*.md',
       './gulpfile.babel.js/**/*.js',
-      './src/html/**/*.html',
-      './src/pug/**/*.pug',
-      './src/js/**/*.js',
-      './src/img/**/*.svg',
-      './src/css/**/*.css',
-      '!./src/css/base/normalize.css',
-      './src/sass/**/*.scss',
-      '!./src/sass/base/normalize.scss'
+      pathSrc + '/html/**/*.html',
+      pathSrc + '/pug/**/*.pug',
+      pathSrc + '/js/**/*.js',
+      pathSrc + '/img/**/*.svg',
+      pathSrc + '/css/**/*.css',
+      '!' + pathSrc + '/css/base/normalize.css',
+      pathSrc + '/sass/**/*.scss',
+      '!' + pathSrc + '/sass/base/normalize.scss'
     ]
+  },
+
+  copy: {
+    src: pathSrc + '/favicon/**/*.*',
+    dest: pathDest + '/favicon',
+    watch: pathSrc + '/favicon/**/*.*'
   }
 };
