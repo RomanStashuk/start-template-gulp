@@ -47,6 +47,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-lintspaces": "^1.0.1",
     "gulp-load-plugins": "^2.0.7",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^4.0.0",
