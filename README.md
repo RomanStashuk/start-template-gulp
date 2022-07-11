@@ -78,6 +78,7 @@ ___
 │   │   │   └── normalize.css   # CSS файл для нормалізації стилів
 │   │   ├── blocks/             # каталог CSS файлів для блоків
 │   │   └── style.css           # індексний CSS файл
+│   ├── favicon/                # каталог з favicon / webmanifest   
 │   ├── fonts/                  # каталог шрифтів
 │   ├── html/                   # каталог із html файлами
 │   │   ├── blocks/             # каталог html компонентів
