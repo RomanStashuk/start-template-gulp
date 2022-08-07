@@ -15,23 +15,26 @@ const sassPlugin = gp.sass(dartSass);
 
 // Обрdбка SASS/SCSS
 export default () => {
-  return gulp.src(path.sass.src, { sourcemaps: app.isDev })
+  return gulp.src(path.sass.src)
     .pipe(gp.plumber({
       errorHandler: gp.notify.onError(error => ({
         title: 'SASS',
         message: error.message
       }))
     }))
+    .pipe(gp.if(app.isDev, gp.sourcemaps.init()))
     .pipe(gp.sassGlob())
     .pipe(sassPlugin())
     .pipe(gp.autoprefixer())
     .pipe(gp.shorthand())
     .pipe(gp.groupCssMediaQueries())
-    .pipe(gulp.dest(path.sass.dest, { sourcemaps: app.isDev }))
+    .pipe(gp.if(app.isDev, gp.sourcemaps.write()))
+    .pipe(gulp.dest(path.sass.dest))
     .pipe(gp.rename({ suffix: '.min' }))
     .pipe(gp.size({ title: 'CSS before' }))
     .pipe(gp.csso())
     .pipe(gp.size({ title: 'CSS after' }))
-    .pipe(gulp.dest(path.sass.dest, { sourcemaps: app.isDev }))
+    .pipe(gp.if(app.isDev, gp.sourcemaps.write()))
+    .pipe(gulp.dest(path.sass.dest))
     .pipe(browserSync.stream());
 };

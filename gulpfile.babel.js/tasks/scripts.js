@@ -14,15 +14,17 @@ const gp = loadPlugins();
 
 // Обрoбка JS
 export default () => {
-  return gulp.src(path.js.src, { sourcemaps: app.isDev })
+  return gulp.src(path.js.src)
     .pipe(gp.plumber({
       errorHandler: gp.notify.onError(error => ({
         title: 'JS',
         message: error.message
       }))
     }))
+    .pipe(gp.if(app.isDev, gp.sourcemaps.init()))
     .pipe(gp.babel())
     .pipe(webpack(app.webpack))
-    .pipe(gulp.dest(path.js.dest, { sourcemaps: app.isDev }))
+    .pipe(gp.if(app.isDev, gp.sourcemaps.write()))
+    .pipe(gulp.dest(path.js.dest))
     .pipe(browserSync.stream());
 };
