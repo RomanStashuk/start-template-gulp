@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Стартовий шаблон для проекту на основі Gulp",
   "main": "gulpfile.babel.js",
-  "author": "RomanStashuk",
+  "author": "RomanStashuk <romanstashuk1@gmail.com> (https://github.com/RomanStashuk)",
   "license": "ISC",
   "repository": {
     "type": "git",
